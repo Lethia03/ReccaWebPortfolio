@@ -100,12 +100,10 @@ html{
     font: italic small-caps bold 16px cursive;
   }
   .sidebar-toggle {
-   
-    display: none; /* hidden by default */
+    display: none;
     position: fixed;
     margin-top: 8vh;
     z-index: 2000;
-  
   }
   .sidebar button{
     background: linear-gradient(45deg, #3d4044, #3f3f3f);
