@@ -43,7 +43,10 @@ body.black-text {
   
   animation: rightToLeft 1s ease forwards;
 }
-
+.intro2{
+  width: auto;
+  height: auto;
+}
 .nav-link {
   text-decoration: none;
   color: white;
