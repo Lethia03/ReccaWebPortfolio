@@ -1,0 +1,337 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* When FILM4 is active */
+body.black-text {
+  color: black;
+}
+
+.pic {
+  height: 8vh;
+}
+
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  border-radius: 40px;
+  border: white dashed 2px;
+  animation: topToBottom 1s ease forwards;
+  position: relative;
+  z-index: 1000;
+}
+@keyframes topToBottom {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/* Nav Links Styling */
+.nav-links-container {
+  display: flex;
+  gap: 20px;
+  font: italic small-caps bold 16px/2 cursive;
+  
+  animation: rightToLeft 1s ease forwards;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger-icon div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.change-btn {
+  display: flex;
+  font: italic small-caps bold 16px/2 cursive;
+  color: white;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1000;
+  background-attachment: fixed;
+}
+
+.box {
+  margin-top: 2vh;
+  height: 70vh;
+  width: 80%;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.intro {
+  margin-top: 3vh;
+  animation: leftToRight 1s ease forwards;
+}
+@keyframes leftToRight {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.intro h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+  margin-left: 3px;
+  font: italic small-caps bold 25px/2 cursive;
+}
+
+.intro h2 {
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+  margin-left: 3px;
+  font: italic small-caps bold 20px/2 cursive;
+}
+
+.intro p {
+  text-align: center;
+  margin-left: 3px;
+  font: italic 1.2rem "Fira Sans", serif;
+}
+
+.intro .button {
+  justify-self: center;
+  color: #000;
+}
+
+.round-image {
+  display: flex;
+  height: 40vh;
+  width: 40vh;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  object-fit: cover;
+  animation: rightToLeft 1s ease forwards;
+  margin-top: 6vh;
+  box-shadow: 0 0 20px rgba(136, 166, 170, 0.8);
+  transform: scale(1.1);
+  justify-self: center;
+  
+}
+ @keyframes rightToLeft {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.resume {
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #aec3eb, #5180d3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  width: 30%;
+  justify-self: center;
+  text-align: center;
+}
+
+.resume:hover {
+  background: linear-gradient(45deg, #5078bd, #ffffff);
+  transform: scale(1.05);
+}
+
+.resume a {
+  text-decoration: none;
+  color: white;
+}
+
+.MEDIA-ICONS {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+  justify-self: center;
+}
+
+.MEDIA-ICONS a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.MEDIA-ICONS .FB { background-image: url(fbicon2.jpg); }
+.MEDIA-ICONS .IG { background-image: url(IG2.jpg); }
+.MEDIA-ICONS .TELE { background-image: url(TELE2.jpg); }
+.MEDIA-ICONS .EMAIL { background-image: url(EMAIL2.jpg); }
+.MEDIA-ICONS .FB:hover { background-image: url(fbicon.jpg); }
+.MEDIA-ICONS .IG:hover  { background-image: url(IG.jpg); }
+.MEDIA-ICONS .TELE:hover  { background-image: url(TELE.jpg); }
+.MEDIA-ICONS .EMAIL:hover  { background-image: url(EMAIL.jpg); }
+
+.MEDIA-ICONS a:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* ✅ Responsive Media Queries for All Devices */
+
+/* Extra small devices (phones) */
+@media (max-width: 575.98px) {
+  *{
+    font-size: small;
+    imga
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box > .round-image {
+    order: -1; /* Move the image to the top */
+    
+  }
+  .round-image{
+    width: 40vw;
+    height: 40vw;
+    margin-top: 1vh;
+  }
+  .intro {
+    order: 1;
+    padding: 0 10px;
+  }
+  .nav-links-container{
+    margin-top: 5vh;
+  }
+}
+
+
+/* Small devices (landscape phones) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .box {
+    grid-template-columns: 1fr; /* stack in a single column */
+  }
+
+  .round-image {
+    order: -1; /* move picture to top */
+    justify-self: center;
+    height: 30vh;
+    width: 30vh;
+    margin-top: 0;
+  }
+
+  .intro {
+    order: 1;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .round-image {
+    height: 30vh;
+    width: 30vh;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resume {
+    width: 25%;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+  .box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resume {
+    width: 20%;
+  }
+}
+
+/* Navbar specific responsiveness */
+@media (max-width: 768px) {
+  .nav-links-container {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 8px;
+    flex-direction: column;
+  }
+
+  .nav-links-container.show-menu {
+    display: flex;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-links-container {
+    display: none;
+    position: absolute;
+    right: 8vh;
+    flex-direction: column;
+  }
+
+  .nav-links-container.show-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+}

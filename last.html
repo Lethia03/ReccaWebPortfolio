@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO-2.0</title>
+    <link rel="stylesheet" href="./last.css">
+</head>
+<body>
+    <header>
+      <div class="navbar-container">
+        <div class="logo"><img src="LOGO.png" alt="" class="pic">
+          
+        </div>
+        
+        <div class="nav-links-container" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="aboutme.html" class="nav-link">About</a>
+          <a href="project.html" class="nav-link">Projects</a>
+          <a href="last.html" class="nav-link">Contact</a>
+          <button onclick="toggleVideo()" class="change-btn">mode</button>
+        </div>
+        
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    
+    </header>
+    <section class="last">
+      <video id="backgroundVideo" autoplay loop muted playsinline class="video-bg">
+        <source src="FILM3.mp4" type="video/mp4">
+      </video>
+      <div class="send">
+        <form id="contactFormUnique" enctype="multipart/form-data">
+          <label for="nameUnique">Your Name</label>
+          <input type="text" id="nameUnique" name="name" required placeholder="Your Name">
+          
+          <label for="emailUnique">Your Email</label>
+          <input type="email" id="emailUnique" name="email" required placeholder="Your Email">
+          
+          <label for="messageUnique">Your Message</label>
+          <textarea id="messageUnique" name="message" rows="4" required placeholder="Your Message"></textarea>
+          
+          <label for="fileUploadUnique">Upload a File</label>
+          <input type="file" id="fileUploadUnique" name="file">
+          <span id="fileNameIndicator">No file selected</span> <!-- Placeholder for file name -->
+      
+          <!-- File Preview Box -->
+          <div id="filePreviewBox">
+            <span id="filePreviewText">No file selected for preview</span>
+          </div>
+      
+          <button type="submit" id="submitUnique">Send Message</button>
+        </form>
+  
+      </div>
+      <div class="map-container">
+        Location
+        <iframe
+          id="map"
+          src=""
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        Contact no: 09302701591
+        <div class="MEDIA-ICONS">
+          <a href="https://www.facebook.com/recca.aquino.3" target="https://www.facebook.com/recca.aquino.3" class="FB"></a>
+          <a href="https://www.instagram.com/lethia.rc/" target="https://www.instagram.com/lethia.rc/" class="IG"></a>
+          <a href="https://t.me/Lethia03?fbclid=IwY2xjawIrZ8lleHRuA2FlbQIxMAABHY0-NuHDY0bItxDAQwcNk0nsM00s6Y4mxl2HV8wdH6scysBm9Xsl_82qiw_aem__VWxTJMC9OQ7YgYCTHbPUA" target="https://t.me/Lethia03?fbclid=IwY2xjawIrZ8lleHRuA2FlbQIxMAABHY0-NuHDY0bItxDAQwcNk0nsM00s6Y4mxl2HV8wdH6scysBm9Xsl_82qiw_aem__VWxTJMC9OQ7YgYCTHbPUA" class="TELE"></a>
+          <a href="reccaaquinox44@gmail.com" target="reccaaquinox44@gmail.com" class="EMAIL"></a>
+          
+      </div>
+      </div>
+    </section>
+    
+    <footer>
+
+    </footer>
+   
+
+
+    <script src="last.js"></script>
+</body>
+</html>

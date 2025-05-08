@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO-2.0</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header>
+      <div class="navbar-container">
+        <div class="logo"><img src="LOGO.png" alt="" class="pic">
+          
+        </div>
+        
+        <div class="nav-links-container" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="aboutme.html" class="nav-link">About</a>
+          <a href="project.html" class="nav-link">Projects</a>
+          <a href="last.html" class="nav-link">Contact</a>
+          <button onclick="toggleVideo()" class="change-btn">mode</button>
+        </div>
+        
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    
+    </header>
+    <section>
+      <video id="backgroundVideo" autoplay loop muted playsinline class="video-bg">
+        <source src="FILM3.mp4" type="video/mp4">
+      </video>
+      <div class="boxes">
+        
+        <div class="sliders-wrapper">
+          <div>
+          <div class="slider-container">
+            <div class="slider" id="slider1">
+              <img src="valorant.jpg" alt="1A" />
+              <img src="spotify.jpg" alt="1B" />
+              <img src="steam.jpg" alt="1B" />
+            </div>
+            <button onclick="slide('slider1', -1)">‹</button>
+            <button onclick="slide('slider1', 1)">›</button>
+          </div> <h3>Sorry but</h3>
+        </div>
+        <div>
+          <div class="slider-container">
+            <div class="slider" id="slider2">
+              <img src="valorant.jpg" alt="1A" />
+              <img src="spotify.jpg" alt="1B" />
+              <img src="steam.jpg" alt="1B" />
+            </div>
+            <button onclick="slide('slider2', -1)">‹</button>
+            <button onclick="slide('slider2', 1)">›</button>
+          </div><h3>I dont have</h3>
+        </div>
+        <div>
+          <div class="slider-container">
+            <div class="slider" id="slider3">
+              <img src="valorant.jpg" alt="1A" />
+              <img src="spotify.jpg" alt="1B" />
+              <img src="steam.jpg" alt="1B" />
+            </div>
+            <button onclick="slide('slider3', -1)">‹</button>
+            <button onclick="slide('slider3', 1)">›</button>
+          </div> <h3>A project</h3>
+        </div>
+        <div>
+          <div class="slider-container">
+            <div class="slider" id="slider4">
+              <img src="valorant.jpg" alt="1A" />
+              <img src="spotify.jpg" alt="1B" />
+              <img src="steam.jpg" alt="1B" />
+            </div>
+            <button onclick="slide('slider4', -1)">‹</button>
+            <button onclick="slide('slider4', 1)">›</button>
+          </div><h3>that I can</h3>
+        </div>
+        <div>
+          <div class="slider-container">
+            <div class="slider" id="slider5">
+              <img src="valorant.jpg" alt="1A" />
+              <img src="spotify.jpg" alt="1B" />
+              <img src="steam.jpg" alt="1B" />
+            </div>
+            <button onclick="slide('slider5', -1)">‹</button>
+            <button onclick="slide('slider5', 1)">›</button>
+          </div><h3>showcase</h3>
+        </div>
+        <div>
+          <div class="slider-container">
+            <div class="slider" id="slider6">
+              <img src="valorant.jpg" alt="1A" />
+              <img src="spotify.jpg" alt="1B" />
+              <img src="steam.jpg" alt="1B" />
+            </div>
+            <button onclick="slide('slider6', -1)">‹</button>
+            <button onclick="slide('slider6', 1)">›</button>
+          </div><h3>as of now</h3>
+        </div>
+        
+    </div>
+    </section>
+    
+    <footer>
+
+    </footer>
+   
+
+
+    <script src="project.js"></script>
+</body>
+</html>

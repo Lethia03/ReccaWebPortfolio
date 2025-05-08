@@ -1,0 +1,76 @@
+*{
+    font-family:  sans-serif;
+}
+/* Default text color (white or whatever you want initially) */
+body {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* When FILM4 is active */
+body.black-text {
+  color: black;
+}
+.pic{
+    height: 8vh;
+}
+ /* Navbar Container */
+ .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+    background-color: #000000;
+    color: #fff;
+    position: relative;
+    border-radius: 40px;
+    border: white dashed 2px;
+  }
+
+  /* Nav Links Styling */
+  .nav-links-container {
+    display: flex;
+    gap: 20px;
+    font: italic small-caps bold 16px/2 cursive;
+
+  }
+
+
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  /* Hamburger Icon */
+  .hamburger-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+
+  .hamburger-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  .change-btn {
+    display: flex;
+    font: italic small-caps bold 16px/2 cursive;
+    color: white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  .video-bg {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1000;
+    background-attachment: fixed;
+   }

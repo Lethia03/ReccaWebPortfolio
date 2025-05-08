@@ -1,0 +1,574 @@
+body {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* When FILM4 is active */
+body.black-text {
+  color: black;
+  
+}
+html{
+  scroll-behavior: smooth;
+}
+.pic{
+    height: 8vh;
+}
+ /* Navbar Container */
+ .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+    background-color: #000000;
+    color: #fff;
+    position: relative;
+    border-radius: 40px;
+    border: white dashed 2px;
+    font: italic small-caps bold 16px/2 cursive;
+    animation: fadeInDown 1s ease-out forwards;
+    position: relative;
+    z-index: 1000;
+  }
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px); /* starts 50px above */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .nav-links-container {
+    display: flex;
+    gap: 20px;
+    animation: rightToLeft 1s ease forwards;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  /* Hamburger Icon */
+  .hamburger-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+
+  .hamburger-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(247, 252, 255);
+    border-radius: 5px;
+  }
+  .change-btn {
+    display: flex;
+    font: italic small-caps bold 16px/2 cursive;
+    color: white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  .video-bg {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    background-attachment: fixed;
+   }
+
+   .sidebar {
+    
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    border-right: #fffefe dashed 3px;
+    margin-top: 8px;
+    text-align: center;
+    gap: 3px;
+    font: italic small-caps bold 16px cursive;
+  }
+  .sidebar-toggle {
+    display: none; /* hidden by default */
+  }
+  .sidebar button{
+    background: linear-gradient(45deg, #3d4044, #3f3f3f);
+    margin-bottom: 1vh;
+    border-radius: 5vh;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .sidebar button:hover{
+    background: linear-gradient(45deg, #dce9ff, #3f3f3f);
+    transform: scale(1.05);
+  }
+  .navme button{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+    
+  }
+
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+    height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    flex: 1;
+    background-color: transparent;
+    animation: rightToLeft 1s ease forwards;
+  }
+  @keyframes rightToLeft {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  .intro{
+    height: 40vh;
+    
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
+  }
+  .intro h3{
+    font: italic small-caps bold 16px/2 cursive;
+  }
+  .info{
+    margin-top: 9vh;
+    margin-left: 2vh;
+  }
+  .pic{
+    margin-left: 5vh;
+    font: italic small-caps bold 16px/2 cursive;
+   
+  }
+  .id{
+    border: #000000 2px dashed;
+  }
+  .intro img{
+    height: 25vh;
+    border-radius: 5vh;
+    
+  }
+  .details{
+    margin-left:5vh ;
+  }
+  .inter img{
+    height: 10vh;
+    border-radius: 2vh;
+  }
+  .skill{
+    height: 100vh;
+   
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+;
+  }
+  .skill h1{
+    font: italic small-caps bold 16px/2 cursive;
+    margin-left: 5vh;
+    font-size: large;
+  }
+  .skill h3{
+    font: italic small-caps bold 16px/2 cursive;
+  }
+  .boxes{
+    display: flex;
+    text-align: center;
+    margin-left: 3vh;
+    font-size: small;
+  }
+
+  .website, .grapics, .video{
+    height: 80vh;
+    border: rgb(112, 112, 110) 3px dashed;
+    margin-left: 1vh;
+    border-radius: 5vh;
+    backdrop-filter: blur(10px);
+    padding: 1em; /* uses font size, scales better than px */
+    
+    max-width: 90%; /* or something flexible */
+    box-sizing: border-box; /* VERY important */
+  }
+  
+  
+  .education{
+  
+    
+    margin-left: 5vh;
+  }
+  .education h1{
+    font: italic small-caps bold 20px/2 cursive;
+
+    
+  }
+  .education img{
+    height: 30vh;
+    border-radius: 50%;
+  }
+  .education div{
+    display: flex;
+    margin-top: 2vh;
+  }
+  .education .grade{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+   text-align: center;
+  }
+  .education p, h3{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  }
+
+
+
+
+
+
+
+
+  
+  .MEDIA-ICONS {
+    display: flex;
+    gap: 8px;
+   margin-top: 40vh;
+    justify-self: center;
+}
+
+.MEDIA-ICONS a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.MEDIA-ICONS .FB { background-image: url(fbicon2.jpg); }
+.MEDIA-ICONS .IG { background-image: url(IG2.jpg); }
+.MEDIA-ICONS .TELE { background-image: url(TELE2.jpg); }
+.MEDIA-ICONS .EMAIL { background-image: url(EMAIL2.jpg); }
+.MEDIA-ICONS .FB:hover { background-image: url(fbicon.jpg); }
+.MEDIA-ICONS .IG:hover  { background-image: url(IG.jpg); }
+.MEDIA-ICONS .TELE:hover  { background-image: url(TELE.jpg); }
+.MEDIA-ICONS .EMAIL:hover  { background-image: url(EMAIL.jpg); }
+
+.MEDIA-ICONS a:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+
+@media (max-width: 599px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin: 0;
+  }.navbar-container img{
+    height: 5vh;
+  }
+
+  .nav-links-container {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 8px;
+    flex-direction: column;
+    margin-top: 3vh;
+    z-index: 1000;
+  }
+
+  .nav-links-container.show-menu {
+    display: flex;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+ 
+
+  
+  .sidebar {
+    padding: 20px;
+    height: 50vh;
+    box-sizing: border-box;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    border: #fffefe dashed 3px;
+    margin: 0;
+    text-align: center;
+    gap: 3px;
+    font: italic small-caps bold 16px cursive;
+    background: rgba(0, 0, 0, 0.8); /* ensures visibility when visible */
+    width: 200px;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    margin-top: 18vh;
+    border-radius: 3vh;
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+
+  .sidebar-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 900;
+    background: #000000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    
+  }
+  .id{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    
+  }
+ 
+
+  
+
+  .content {
+    margin-left: -0;
+    padding: 15px;
+    
+    margin: 0;
+  }
+  .pic{
+    margin: 0;
+  }
+  .intro {
+    flex-direction: column;
+    height: auto;
+  }
+
+.details{
+  margin: 0;
+  text-align: center;
+}
+  .intro img {
+    height: 20vh;
+    justify-content:center ;
+  }
+  .info{
+    margin-top: 25vh;
+    text-align: center;
+    margin-left: 0;
+  }
+  .boxes {
+    flex-direction: column; /* Stack the boxes vertically */
+    text-align: center;
+    margin-left: 0;
+  }
+  .inter img{
+    height: 7vh;
+
+    
+  }
+  .inter{
+    margin: 0;
+    text-align: center;
+  }
+  
+  .skill h1{
+    margin: 0;
+    margin-top: 5vh;
+  }
+  .website, .grapics, .video {
+    margin-left: 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 5vh;
+  }
+
+
+  .MEDIA-ICONS {
+    gap: 12px;
+    margin-top: 10vh; /* Adjust position of social media icons */
+  }
+
+  .MEDIA-ICONS a {
+    width: 25px;
+    height: 25px;
+  }
+
+  .MEDIA-ICONS a:hover {
+    transform: scale(1.3);
+  }
+  .education {
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+  
+  .education h1 {
+    font: italic small-caps bold 20px/1 cursive;
+    margin: 0;
+    padding: 0;
+    margin-top: 5vh;
+  }
+  
+  .education img {
+    height: 20vh;
+    border-radius: 50%;
+    display: block;
+    margin-top: 3vh;
+  }
+  
+  .education div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 1vh;
+  }
+  
+  .education .grade {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    gap: vh;
+  }
+  
+  .education p,
+  .education h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+}
+
+  /* Mobile View: Show hamburger and hide links */
+  @media screen and (min-width: 600px) and (max-width: 768px) {
+    .sidebar{
+      animation: leftToRight 1s ease forwards;
+    }
+    @keyframes leftToRight {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .navbar-container {
+      font-size: 14px;
+      padding: 0.5vh;
+    }
+  
+    .nav-link {
+      font-size: 16px;
+    }
+    .details{
+      margin-top: 10vh;
+    }
+    .inter{
+      margin-top: 10vh;
+    }
+    .pic {
+      height: 6vh;
+      margin-left: 3vh;
+    }
+  
+    .intro img {
+      height: 20vh;
+    }
+  
+    .inter img {
+      height: 8vh;
+    }
+    .skill{
+      margin-top: 10vh;
+      height: 100vh;
+    }
+    .skill h1 {
+      font-size: medium;
+    }
+  
+    .boxes {
+      font-size: smaller;
+      display: flex;
+      flex-direction: column;
+
+    }
+  .education{
+    margin-top: 60vh;
+  }
+    .website, .grapics, .video {
+      height: 50vh;
+      padding: 0.8em;
+    }
+  
+    .education img {
+      height: 25vh;
+    }
+  
+    .MEDIA-ICONS a {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+    @media (min-width:769px)  {
+      .sidebar{
+        animation: leftToRight 1s ease forwards;
+      }
+      @keyframes leftToRight {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+        .nav-links-container {
+          display: none;
+          position: absolute;
+          right: 8vh;
+          flex-direction: column;
+        }
+  
+        .nav-links-container.show-menu {
+          display: flex;
+          flex-direction: row;
+        }
+  
+        .hamburger-icon {
+          display: flex;
+        }
+        .skill img{
+          height: 8vh;
+        }
+        .info{
+          align-items: center;
+        }
+      }

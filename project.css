@@ -1,0 +1,249 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  transition: color 0.3s ease;
+  overflow-x: hidden;
+}
+
+body.black-text {
+  color: black;
+}
+
+.pic {
+  height: 8vh;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1000;
+}
+
+
+.page-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 10vh;
+}
+
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 2vw;
+  background-color: #000;
+  color: #fff;
+  position: sticky;
+  
+  border-radius: 40px;
+  border: white dashed 2px;
+  z-index: 2;
+  animation: topToBottom 1s ease forwards;
+}
+
+@keyframes topToBottom {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+.nav-links-container {
+  display: flex;
+  gap: 20px;
+  font: italic small-caps bold 16px/2 cursive;
+  animation: rightToLeft 1s ease forwards;
+}
+@keyframes rightToLeft {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger-icon div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.change-btn {
+  display: flex;
+  font: italic small-caps bold 16px/2 cursive;
+  color: white;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+
+.sliders-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 5vh;
+  padding: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.sliders-wrapper h3 {
+  text-align: center;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+.slider-container {
+  position: relative;
+  width: 40vh;
+  height: 25vh;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+  width: calc(100% * 2); 
+  
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sliders-wrapper button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 6px;
+  
+}
+.boxes{
+  animation: bottomToTop 1s ease forwards;
+}
+@keyframes bottomToTop {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+button:nth-of-type(2) { right: 10px; }
+button:nth-of-type(1) { left: 10px; }
+
+
+@media (max-width: 767px) {
+  .nav-links-container {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 8px;
+    flex-direction: column;
+    margin-top: 3vh;
+  }
+
+  .nav-links-container.show-menu {
+    display: flex;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .sliders-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .slider-container {
+    width: 80vw;
+    height: 30vh;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-links-container {
+    display: none;
+    position: absolute;
+    right: 8vh;
+    flex-direction: column;
+  }
+
+  .nav-links-container.show-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .sliders-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slider-container {
+    width: 35vh;
+    height: 25vh;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .nav-links-container {
+    display: none;
+    position: absolute;
+    right: 8vh;
+    flex-direction: column;
+  }
+
+  .nav-links-container.show-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .sliders-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .slider-container {
+    width: 40vh;
+    height: 25vh;
+  }
+}
